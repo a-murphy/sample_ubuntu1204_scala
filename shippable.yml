@@ -11,6 +11,8 @@ build_image: shippableimages/ubuntu1204_scala:0.0.1
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
+  - return 1
+  - exit 0
 
 after_script:
   - mkdir -p shippable/codecoverage
