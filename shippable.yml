@@ -1,19 +1,19 @@
-language: scala
-
-scala:
-    - 2.11.0
-
+language: ruby
 env:
-  - secure: aoea4cqYxdn0FsGQpw8Wl5E+uDiMrGem7f5V1zRHu5RzA+1RZJwuf0KIGfb9+ShvlLO9IbW9ZcqxwWJoZQ4LD7aOYDAe9eGFTUWypWHzb3CnL4UnnVn4rezwy+MzSyI/lmgFjjrPKDzIlZx2/Ph2bKiZbbScYqUYm6AiBFZayfVyYufiH5JCC99/Ody6wuk6Id8lyg4SJf0rahIDXvD42sI1F25VvUS6DAQ7q5lH8Dzwks5tFwHx9pF4xByH7i43XX80m+6yHkF6tmyxV6pIqK2831O0C7y3uleoJ1VLdGpSOyjxqM6nQorrRxkH2DwKU+NnWctl72BzxYuv2aYQ==
-
-before_script:
-  - export PATH=$PATH:$SHIPPABLE_REPO_DIR
-
+  global:
+    - secure: SDj3WJhbHAfFeF0+CtbsMRU0YV2lWwujG22LA7i0liHmctI9mViM7fLj+1A6iKuX6hpZS1Enymub/QGO5kie4N9ofJTfuhOLrgrNoNyQwZRJUsPgBM/zZe/vEamURLVYzh1SuTLhQIokZQrn+9UteAHVs7cz9BXgkM5taceQWJXLuzveu/GhVJNGJvaPFkR444BTvZKMYjEOTMYKcZYiG1US5F6feGJB5LXgWIFmN2uLYL4I9UTBg/zYj7NiRx3CxaxeA597WdwoS481RD4XF7NfRIwcmBRN0M9V/ZVn71mbfB9WGY2b5QvFTwp1ICVWN3Icm7YoJOTGMyv5dbEJnHLebRoTGYptFAsHM1hE3nV4TfTEzgUDO2eYmIqNSSxu7snvZ3lx66PUfYtbDM3+O7F5VerP28aku53P3PvIRYN1VcSGSkN8HiNo9tyU7U/hrl0B3m2YuXqVN0dP0t/byLrNaiVAS8jWgITv5OfmnfI4vREwT1QrClyoXSefUlS+TZVvj4qeNjDCaiBQS/tS+l4EJ6eBU+p3zSxRny/j/Koyz6H/8Z8qfWXNkJKBIbVebJgtlZs9Hotgzs/73vjIS3oId1YcWFaWv4H14WazyCf8B14ozXq2qC+8OUruGEwPLTP0iX/8QTVATirT8DPeq8XR9hdPRoyRkCBa6DSwiHw=
+    - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+build_image: shippable/minv2
+services:
+  - mongodb
 script:
-  - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
-  - sbt clean scoverage:test
-
-after_script:
-  - mkdir -p shippable/codecoverage
-  - mv target/scala-2.11/coverage-report/cobertura.xml $PWD/shippable/codecoverage/
-
+  - bundle exec rake
+rvm:
+  - 2.2.2
+before_install:
+  - echo "true"
+install:
+  - bundle install --gemfile="Gemfile"
+cache: true
+notifications:
+  email: false
