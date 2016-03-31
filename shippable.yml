@@ -2,17 +2,8 @@ language: ruby
 env:
   global:
     - secure: nQmiC6W9caknZNLkO1GJKAIkQAY8K99kSeY0akUwWBlNWuza3A+1EI4kVbg/jtepL4uqoO3v6SZTx0XLDrgWBLPbiMC6f1ixn5BmaRjbtQ+ANOoH18hQ9wBLtE1ghO5lvX4rShJ9qmEpvCls4bdVyVG8eqdmpLDRx2MwZr36WFYHxVEp210nkiSrQkCdCUAETdYikvb4QJQ+Y7nNYzn2yAbIkXjJVJp1+appk2clLADLygdKPazwPYRrvS6mmd9qR6V3xVb0Yq/F+eYx3OSCApuZP0L93rUBlrhWyOQaI6u4KXaa0f8Z+yiC56AZ6xyuxHWkkNYFpXBRcgBeMVbwMw==
-build_image: shippable/minv2
-services:
-  - mongodb
-script:
-  - bundle exec rake
+
 rvm:
   - 2.2.2
 before_install:
   - echo "true"
-install:
-  - bundle install --gemfile="Gemfile"
-cache: true
-notifications:
-  email: false
