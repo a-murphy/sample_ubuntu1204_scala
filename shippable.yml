@@ -1,7 +1,7 @@
 language: ruby
 env:
   global:
-    - secure: BxsA0j/YUpw5wHrxdJhoqbLhgxs5e6TlRewpCHe+uLfp5bkNyaX6/j1EN9ABqPJMsnN+2AOh6BVkeRdSFuQHpVRVhtwXU06N3QPclDBMEEQuz/izUpOTbzdwj0q/FlQIj3N1TcJDiK00kZth1GntqUaasXwIFNJvAZDYoYPjmBeAMk8SQvUmUoneH42qm24MkYZh6+F2gVcCACwW/tgbHk4Jy6n99xa73udn8CAz98Lf/uO7BxtH0JxqwZI6x6eGfGRkcygQXw+W1V5mxPVCp4Q+T2NLygTeaBy798nIKUridEEBLQVh5Ci2kR5LzGEdwC6kmoykuKRiJ7UWDbAyCw==
+     - secure: GPmIplOXQKGTJcSc3PeqRSWIFVz3np1CjblJOtyfW9yZnoR8oW+JgE5xSKj3nq1a1YawSVot5nFNOJZDJcXxhbdnNAXIaIoAVCsprEe820FasTLyef5mgpScXV36ba7PSZQgiFEzCKMvuJz6QhuH32m6wEs7cOIUF08gRuC7YWYMow1MUYNWFX/tNKJu6dtaV/gSQv3fjG359vbFscP1jaZdUxVvuoq91trYsJxoJwhmzFgalsawS/na9UKNs1C3VBs6OXyTg+sQAb55FQWyWzh6G7ZdYkFdkJYLVZn/hQ1/6K2VBO6BJfqax8H2wxGhO8IlfmuBFp3oUPx/E65oSQ== 
     - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 build_image: shippable/minv2
 services:
