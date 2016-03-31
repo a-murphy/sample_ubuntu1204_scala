@@ -4,7 +4,7 @@ scala:
     - 2.11.0
 
 env:
-  - secure: BUaoea4cqYxdn0FsGQpw8Wl5E+uDiMrGem7f5V1zRHu5RzA+1RZJwuf0KIGfb9+ShvlLO9IbW9ZcqxwWJoZQ4LD7aOYDAe9eGFTUWypWHzb3CnL4UnnVn4rezwy+MzSyI/lmgFjjrPKDzIlZx2/Ph2bKiZbbScYqUYm6AiBFZayfVyYufiH5JCC99/Ody6wuk6Id8lyg4SJf0rahIDXvD42sI1F25VvUS6DAQ7q5lH8Dzwks5tFwHx9pF4xByH7i43XX80m+6yHkF6tmyxV6pIqK2831O0C7y3uleoJ1VLdGpSOyjxqM6nQorrRxkH2DwKU+NnWctl72BzxYuv2aYQ== 
+  - secure: BUaoea4cqYxdn0FsGQpw8Wl5E+uDiMrGem7f5V1zRHu5RzA+1RZJwuf0KIGfb9+ShvlLO9IbW9ZcqxwWJoZQ4LD7aOYDAe9eGFTUWypWHzb3CnL4UnnVn4rezwy+MzSyI/lmgFjjrPKDzIlZx2/Ph2bKiZbbScYqUYm6AiBFZayfVyYufiH5JCC99/Ody6wuk6Id8lyg4SJf0rahIDXvD42sI1F25VvUS6DAQ7q5lH8Dzwks5tFwHx9pF4xByH7i43XX80m+6yHkF6tmyxV6pIqK2831O0C7y3uleoJ1VLdGpSOyjxqM6nQorrRxkH2DwKU+NnWctl72BzxYuv2aYQ==
 
 before_script:
   - export PATH=$PATH:$SHIPPABLE_REPO_DIR
