@@ -4,5 +4,6 @@ env:
 
 rvm:
   - 2.2.2
-before_install:
-  - echo "true"
+build:
+  ci:
+    - echo "true"
