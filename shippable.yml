@@ -1,8 +1,15 @@
 language: scala
 
 scala:
-    - 2.11.0
-
+  - 2.11.0
+  - 2.9.3
+  - 2.10.5
+  - 2.12.4
+    
+jdk:
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8
 
 build:
   pre_ci_boot:
